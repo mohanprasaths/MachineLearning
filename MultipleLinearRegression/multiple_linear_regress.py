@@ -41,5 +41,10 @@ X_opt = X[: , [0,1,2,3,4,5]]
 regressor_OLS = sm.OLS(endog = y , exog= X_opt).fit()
 regressor_OLS.summary()
 
+X_opt = X[: , [0,1,3,4,5]]
+regressor_OLS = sm.OLS(endog = y , exog= X_opt).fit()
+regressor_OLS.summary()
 
-
+X_opt = X[: , [0,3]]
+regressor_OLS = sm.OLS(endog = y , exog= X_opt).fit()
+regressor_OLS.summary()

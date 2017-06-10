@@ -35,8 +35,11 @@ plt.ylabel('Salary')
 plt.show()
 
 #Visualise the Polyomial Regression
+#For smoother result
+X_grid = np.arange(start = min(X) , stop = max(X) , step = 0.1)
+X_grid = X_grid.reshape(len(X_grid),1)
 plt.scatter(X , y , color = 'red')
-plt.plot(X , lin_reg2.predict(poly_reg.fit_transform(X)) , color="blue")
+plt.plot(X_grid , lin_reg2.predict(poly_reg.fit_transform(X_grid)) , color="blue")
 plt.title('Salary vs experience on training data')
 plt.xlabel('Experience in years')
 plt.ylabel('Salary')

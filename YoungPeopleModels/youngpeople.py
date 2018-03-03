@@ -51,6 +51,7 @@ X_train, X_test, y_train, y_test,  = train_test_split(X,y,test_size= 0.2,random_
 # using mean and standard deviation -
 # Fit function find the mean and standard deviation , where transform applies them
 # Training data - fit and transform - Test data - only transform
+#
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
@@ -65,6 +66,7 @@ regressor.fit(X_train,y_train)
 
 y_pred = regressor.predict(X_test)
 
-myCalc = [1,1,1,1,1,1,4,5,1,1,1,1]
+myCalc = [5,5,	5,	3,	2,	3,	4,	20,	163,	48,	0,	0]
+
 
 regressor.predict(myCalc)
